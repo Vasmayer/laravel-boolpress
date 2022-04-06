@@ -2,7 +2,9 @@
   <div>
       <h2>POSTS</h2>
       <ul class="m-3" v-if="posts.length">
-          <li v-for="post in posts" :key="post.id">{{post.title}}</li>
+          <li v-for="post in posts" :key="post.id">{{post.title}}
+              <router-link class="m-3 btn btn-success" :to="{name:'post-detail',params:{id:post.id}}">vedi</router-link>
+          </li>
       </ul>
       <div v-else>
           <h4>Non ci sono posts</h4>

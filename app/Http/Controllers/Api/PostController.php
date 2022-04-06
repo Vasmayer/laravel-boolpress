@@ -38,7 +38,10 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = Post::with('category','tags')->find($id);
+
+        
+        return response()->json($post);
     }
 
     /**
