@@ -1,19 +1,24 @@
 <template>
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Benvenuti</div>
-
-                    <div class="card-body">
-                        <h2>Sito in costruzione</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
+       <PostList />
     </div>
 </template>
 
 <script>
-  name:'App'
+import Header from './Header.vue';
+import PostList from './posts/PostList.vue';
+
+  export default {
+      name:'App',
+      components:
+      {
+          Header,
+          PostList,
+      },
+      data(){
+          return {
+              title:'Benvenuti con la props',
+          }
+      }
+}
 </script>
